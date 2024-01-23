@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos com DOM</title>
     <style>
-        body{
+        body {
             background: rgb(21, 133, 53);
             color: white;
             font-family: sans-serif;
@@ -16,24 +16,21 @@
 <body>
     <h1>Iniciando estudos com <strong>DOM</strong></h1>
 
-    <p>Aqui vai o resutado</p>
+    <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
-
+    <div id="msg">Clique em mim</div>
 
     <script>
-        var corpo = window.document.body
+        document.addEventListener('DOMContentLoaded', function() {
+            var p1 = document.getElementsByTagName('p')[1];
+            var d = document.getElementById('msg');
 
-        var p1 = window.document.getElementsByTagName('p')[0]
-       
-        window.alert('Esta escrito assim: ' + p1.innerHTML) 
+            window.write('Está escrito assim: ' + p1.innerHTML);
 
-
-        corpo.style.background = 'blue'
-        p1.style.color = 'blue'
-
+            d.style.background = 'blue';
+            document.body.style.background = 'green';
+            p1.style.color = 'blue';
+        });
     </script>
-
-
 </body>
 </html>
