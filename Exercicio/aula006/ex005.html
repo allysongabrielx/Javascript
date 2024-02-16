@@ -6,7 +6,7 @@
     <title>Estudos com DOM</title>
     <style>
         body {
-            background: rgb(21, 133, 53);
+            background: rgb(15, 123, 45);
             color: white;
             font-family: sans-serif;
             font-size: 18pt;
@@ -20,17 +20,26 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div id="msg">Clique em mim</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var p1 = document.getElementsByTagName('p')[1];
-            var d = document.getElementById('msg');
+<script>
 
-            window.write('Está escrito assim: ' + p1.innerHTML);
 
-            d.style.background = 'blue';
-            document.body.style.background = 'green';
-            p1.style.color = 'blue';
-        });
-    </script>
+    var corpo = window.document.body
+
+    var p1 = window.document.getElementsByTagName('p')[0]
+
+    var d = window.document.getElementById('msg')
+    
+    window.document.write('Está esccrito assim: ' + p1.innerHTML)
+
+    d.style.background = 'black'
+
+    var d = window.document.querySelector('div#msg')
+
+    d.style.color = 'red'
+
+    
+    
+
+</script>
 </body>
 </html>
